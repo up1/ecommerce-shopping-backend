@@ -1,15 +1,15 @@
 # ecommerce-shopping-backend
 
 Project Package
-com.tcrb.shoppingcart.domain.(ระบุ subpackage)
+com.tcrb.shoppingcart.(ระบุ domain).(ระบุ subpackage)
 
-Domain ประกอบด้วย
+ชื่อ Domain ประกอบด้วย
   - product
   - customer
   - shipping
   - payment
   
-  Subpackage ประกอบด้วย
+ ชื่อ Subpackage ประกอบด้วย
   - controller
   - pojo
   - api
@@ -24,8 +24,8 @@ Domain ประกอบด้วย
   [deleted] ลบไฟล์ออก
   
   
-  # การทำงานกับ Resouce
-  - ชื่อต้องเป็นพหูพจน์
+  # การทำงานกับ Resource
+  - ชื่อต้องเป็นพหูพจน์ เช่น products
   - url ต้องขึ้นต้นด้วย /api/[version]/[result]
   - Attribute ไม่ต้องใส่ชื่อ resource
   
