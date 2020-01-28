@@ -62,4 +62,11 @@ com.tcrb.shoppingcart.(ระบุ domain).(ระบุ subpackage)
   com.tcrb.shoppingcart.shipping.logic
   com.tcrb.shoppingcart.payment.api
   
+ # Database setup 
+ Database user : admin_2
  
+ Password : 111111
+ 
+ URL : 54.169.131.113:5432
+ 
+ Database Name : shopping
