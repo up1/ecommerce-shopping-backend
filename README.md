@@ -37,5 +37,36 @@ com.tcrb.shoppingcart.(ระบุ domain).(ระบุ subpackage)
   - ไม่ใส่ Parameter จะ Return List
   - ใส่ Parameter จะ Return Detail ของข้อมูล
   
+  # Project package structure
+  com.tcrb.shoppingcart.product.controller
+  com.tcrb.shoppingcart.product.dao
+  com.tcrb.shoppingcart.product.pojo
+  com.tcrb.shoppingcart.product.logic
+  com.tcrb.shoppingcart.product.api
   
+  com.tcrb.shoppingcart.customer.controller
+  com.tcrb.shoppingcart.customer.dao
+  com.tcrb.shoppingcart.customer.pojo
+  com.tcrb.shoppingcart.customer.logic
+  com.tcrb.shoppingcart.customer.api
+  
+  com.tcrb.shoppingcart.payment.controller
+  com.tcrb.shoppingcart.payment.dao
+  com.tcrb.shoppingcart.payment.pojo
+  com.tcrb.shoppingcart.payment.logic
+  com.tcrb.shoppingcart.payment.api
+  
+  com.tcrb.shoppingcart.shipping.controller
+  com.tcrb.shoppingcart.shipping.dao
+  com.tcrb.shoppingcart.shipping.pojo
+  com.tcrb.shoppingcart.shipping.logic
+  com.tcrb.shoppingcart.payment.api
+  
+ # Database setup 
+ Database user : admin_2
  
+ Password : 111111
+ 
+ URL : 54.169.131.113:5432
+ 
+ Database Name : shopping
