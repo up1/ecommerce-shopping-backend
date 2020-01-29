@@ -8,8 +8,9 @@ pipeline {
        }
        stage('Testing') {
           steps {
-            sh "./mvnw clean test"
-            junit 'target/surefire-reports/*.xml'
+            catchError {
+              sh "./mvnw clean test"
+            }
           }
         }
         stage('Package') {
@@ -33,6 +34,12 @@ pipeline {
       post {
         always {
             junit 'target/surefire-reports/*.xml'
+        }
+        success {
+            build 'sound-success'
+        }
+        failure {
+            build 'sound-fail'
         }
       }
 }
