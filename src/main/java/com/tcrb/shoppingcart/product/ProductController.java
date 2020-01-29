@@ -28,5 +28,21 @@ public class ProductController {
 
         return responseProductList;
     }
+
+    @GetMapping("/api/v1/products/{id}")
+    public ResponseProduct getProductDetail(@PathVariable String id)
+    {
+        ResponseProduct responseProduct = new ResponseProduct();
+        responseProduct.setId(1);
+        responseProduct.setName("Balance Trainning Bicycle");
+//        ResponseProduct responseProduct = new ResponseProduct();
+//        responseProduct.id = 1;
+//        responseProduct.name = "product1";
+//        responseProduct.price = 100.00;
+//        responseProduct.brand = "Adda";
+//        responseProductList.add(responseProduct);
+
+        return responseProduct;
+    }
 }
 
