@@ -22,7 +22,7 @@ pipeline {
              jacoco()
           }
         }
-        stage('Package') {
+        stage('Deploy') {
           steps {
             sh label: '', script: '''docker-compose down
             docker-compose build --no-cache
