@@ -16,11 +16,7 @@ pipeline {
                 },
                 code_analysis: {
                   catchError {
-                    sh '''./mvnw sonar:sonar
-                    -Dsonar.projectKey=pui
-                    -Dsonar.projectName=pui
-                    -Dsonar.junit.reportPaths=target/surefire-reports
-                    -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco'''
+                    sh label: '', script: './mvnw sonar:sonar -Dsonar.projectKey=pui -Dsonar.projectName=pui -Dsonar.junit.reportPaths=target/surefire-reports -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco'
                   }
                 }
               )
