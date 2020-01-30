@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class ProductController {
@@ -14,9 +15,11 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping("/api/v1/products")
-    public ArrayList<ResponseProduct> getProductList(@RequestParam Integer age_id,@RequestParam Integer gender_id)
+    public List<ResponseProduct> getProductList(
+            @RequestParam("age_id") Integer ageId,
+            @RequestParam("gender_id") Integer genderId)
     {
-        ArrayList<ResponseProduct> responseProductList = new ArrayList<ResponseProduct>();
+        List<ResponseProduct> responseProductList = new ArrayList<>();
 
 
 //        ResponseProduct responseProduct = new ResponseProduct();
