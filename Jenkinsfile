@@ -18,7 +18,8 @@ pipeline {
                   catchError {
                     sh "./mvnw sonar:sonar"
                   }
-               )
+                }
+              )
           }
         }
         stage('Package') {
