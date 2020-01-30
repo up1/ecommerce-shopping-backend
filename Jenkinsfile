@@ -6,7 +6,7 @@ pipeline {
              git 'git@github.com:up1/ecommerce-shopping-backend.git'
          }
        }
-       stage('Testing') {
+       stage('Building') {
           steps {
               parallel(
                 testing: {
@@ -15,8 +15,9 @@ pipeline {
                   }
                 },
                 code_analysis: {
-                  sh "./mvnw sonar:sonar"
-                }
+                  catchError {
+                    sh "./mvnw sonar:sonar"
+                  }
                )
           }
         }
