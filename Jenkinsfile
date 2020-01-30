@@ -8,9 +8,16 @@ pipeline {
        }
        stage('Testing') {
           steps {
-            catchError {
-              sh "./mvnw clean test"
-            }
+              parallel(
+                testing: {
+                  catchError {
+                    sh "./mvnw clean test"
+                  }
+                },
+                code_analysis: {
+                  sh "./mvnw sonar:sonar"
+                }
+               )
           }
         }
         stage('Package') {
