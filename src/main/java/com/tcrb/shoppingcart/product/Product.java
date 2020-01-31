@@ -2,15 +2,14 @@ package com.tcrb.shoppingcart.product;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
-@Entity
+@Entity(name="product")
 public class Product {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
     @Column(name = "toy_name")
@@ -22,7 +21,7 @@ public class Product {
     @Column(name = "price")
     private Double price;
     @Column(name = "availability")
-    private String availability;
+    private int availability;
     @Column(name = "brand")
     private String brand;
 }
